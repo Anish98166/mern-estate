@@ -31,7 +31,6 @@ export const signin = async (req, res, next) => {
     res
       .cookie("access_token", token, {
         httpOnly: true,
-        expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 365),
       })
       .status(200)
       .json(rest);
